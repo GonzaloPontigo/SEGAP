@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Segap</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+			<a href="/profile_Al" class="navbar-brand">SEGAP</a>
+			<ul class="nav navbar-nav">
+					<li><a href="/profile_Al" >Mi perfil</a></li>
+					<li><a href="/logout" >Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+<!-- MAIN CONTENT HERE -->
+<%- defineContent('hero') %>
+
+	<main>
+		<div class="container">
+		<%- body %>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div>
+			<a method="post" href="/contact_profile">Contactar Soporte SEGAP USM</a>
+			<br>SEGAP Copyright &copy; 2016
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

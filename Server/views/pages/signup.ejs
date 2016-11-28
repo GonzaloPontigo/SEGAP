@@ -1,0 +1,329 @@
+
+<script>
+        function grupo()
+        {
+			var ec1 = parseInt(document.getElementById("ec1").value);
+			var ec2 = parseInt(document.getElementById("ec2").value);
+			var ec3 = parseInt(document.getElementById("ec3").value);
+			var ec4 = parseInt(document.getElementById("ec4").value);
+			var ec5 = parseInt(document.getElementById("ec5").value);
+			var ec6 = parseInt(document.getElementById("ec6").value);
+			var ec7 = parseInt(document.getElementById("ec7").value);
+			var ec8 = parseInt(document.getElementById("ec8").value);
+			var ec9 = parseInt(document.getElementById("ec9").value);
+			var ec10 = parseInt(document.getElementById("ec10").value);
+			var ec11 = parseInt(document.getElementById("ec11").value);
+			var ec12 = parseInt(document.getElementById("ec12").value);
+			
+			var or1 = parseInt(document.getElementById("or1").value);
+			var or2 = parseInt(document.getElementById("or2").value);
+			var or3 = parseInt(document.getElementById("or3").value);
+			var or4 = parseInt(document.getElementById("or4").value);
+			var or5 = parseInt(document.getElementById("or5").value);
+			var or6 = parseInt(document.getElementById("or6").value);
+			var or7 = parseInt(document.getElementById("or7").value);
+			var or8 = parseInt(document.getElementById("or8").value);
+			var or9 = parseInt(document.getElementById("or9").value);
+			var or10 = parseInt(document.getElementById("or10").value);
+			var or11 = parseInt(document.getElementById("or11").value);
+			var or12 = parseInt(document.getElementById("or12").value);
+			
+			var ca1 = parseInt(document.getElementById("ca1").value);
+			var ca2 = parseInt(document.getElementById("ca2").value);
+			var ca3 = parseInt(document.getElementById("ca3").value);
+			var ca4 = parseInt(document.getElementById("ca4").value);
+			var ca5 = parseInt(document.getElementById("ca5").value);
+			var ca6 = parseInt(document.getElementById("ca6").value);
+			var ca7 = parseInt(document.getElementById("ca7").value);
+			var ca8 = parseInt(document.getElementById("ca8").value);
+			var ca9 = parseInt(document.getElementById("ca9").value);
+			var ca10 = parseInt(document.getElementById("ca10").value);
+			var ca11 = parseInt(document.getElementById("ca11").value);
+			var ca12 = parseInt(document.getElementById("ca12").value);
+		
+			var ea1 = parseInt(document.getElementById("ea1").value);
+			var ea2 = parseInt(document.getElementById("ea2").value);
+			var ea3 = parseInt(document.getElementById("ea3").value);
+			var ea4 = parseInt(document.getElementById("ea4").value);
+			var ea5 = parseInt(document.getElementById("ea5").value);
+			var ea6 = parseInt(document.getElementById("ea6").value);
+			var ea7 = parseInt(document.getElementById("ea7").value);
+			var ea8 = parseInt(document.getElementById("ea8").value);
+			var ea9 = parseInt(document.getElementById("ea9").value);
+			var ea10 = parseInt(document.getElementById("ea10").value);
+			var ea11 = parseInt(document.getElementById("ea11").value);
+			var ea12 = parseInt(document.getElementById("ea12").value);
+			
+            var ec = ec1+ec2+ec3+ec4+ec5+ec6+ec7+ec8+ec9+ec10+ec11+ec12;
+			var or = or1+or2+or3+or4+or5+or6+or7+or8+or9+or10+or11+or12;
+			var ca = ca1+ca2+ca3+ca4+ca5+ca6+ca7+ca8+ca9+ca10+ca11+ca12;
+			var ea = ea1+ea2+ea3+ea4+ea5+ea6+ea7+ea8+ea9+ea10+ea11+ea12;			
+			
+			var eaor = ea-or;
+			var caec = ca-ec;
+			
+			if (eaor>=6){
+				if (caec>=4){
+					document.getElementById("g").value = "conv";
+				}
+				else {
+					document.getElementById("g").value = "adap";
+				}
+			}
+			else {
+				if (caec>=4){
+					document.getElementById("g").value = "asim";
+				}
+				else {
+					document.getElementById("g").value = "dive";
+				}
+			}
+        }
+    </script>
+</body>
+</html>
+<div class="jumbotron text-center">
+	<div class="container row">
+			<br>
+			<div class="main col-md-4 col-md-offset-2">
+				<div class="text-primary text-justify">
+				<p>¿Ya estás registrado? <a href="/">Conéctate</a></p>
+					<h4 class="info" > Registro Usuarios</h4>
+				</div>
+				<br>
+				<form class="auth_form" method="POST" action="/signup">
+
+					<div class="form-group">
+						<label for="user">Ingrese Nombre </label>
+						<input class="form-control" name="name" type="text" placeholder="Nombre" required>
+						</input>
+					</div>
+
+					<div class="form-group">
+						<label for="user">Ingrese Apellido </label>
+						<input class="form-control" name="lastname" type="text" placeholder="Apellido" required>
+						</input>
+					</div>
+
+					<div class="form-group">
+						<label for="user">Ingrese Correo Electrónico </label>
+						<input class="form-control" name="username" type="text" placeholder="Email" required>
+						</input>
+					</div>
+
+					<div class="form-group">
+						<label for="Password">Ingrese Contraseña </label>
+						<input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+						</input>
+					</div>
+					
+					<div class="form-group">
+						<input type="hidden" id="g" class="form-control" name="group">
+						</input>
+					</div>
+					
+					
+					</div>				
+				<hr>
+			<div class="main col-md-4 col-md-offset-1">
+				<div class="text-primary text-justify">
+					<h4 class="info" > Instrucciones de Registro</h4>
+					<p> Para registrarse, usted debe llenar los datos requeridos en cada campo de texto y luego responder el cuestionario.
+				</div>
+			</div>
+		</div>
+					
+	</div>
+	
+	<div class="jumbotron text-left">
+	<div class="container row">
+				<div class="main col-md-4 col-md-offset-2">
+						<h2 class="info" > Cuestionario</h2>
+						<b> A continuación se presenta un ejemplo: </b></br>
+						<p class="question">1. Cuando aprendo...</p>        
+						<div>
+						<ul class="answers">            
+								<input type="number" id="eg1" min="1" max="4"> soy feliz.<br/>
+								<input type="number" id="eg2" min="1" max="4"> soy rápido.<br/>
+								<input type="number" id="eg3" min="1" max="4"> soy lógico.<br/>
+								<input type="number" id="eg4" min="1" max="4"> soy cuidadoso.<br/>
+						</ul>
+						</div>
+				</div>
+				
+				
+
+						<div class="main col-md-4 col-md-offset-1">
+				<div class="text-primary text-justify">
+					<h4 class="info" > Instrucciones Cuestionario</h4>
+					<p>Para responder el cuestionario numera con un 4 la terminación que mejor se ajuste
+					a tu forma de aprender y con un 1 la que peor se ajuste.
+					Asegúrate de asignar un número a todas las terminaciones de cada
+					una de las 12 frases.
+						<h4 class="info" ><b>RECUERDE: </b></br></h4>
+				4 = lo que más se parece a ti. </br>
+				3 = lo segundo que más se parece a ti. </br>
+				2 = lo tercero que más se parece a ti. </br>
+				1 = lo que menos se parece a ti. </br>
+				</div>
+			</div>
+
+		
+	</div>
+	</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">1. Cuando aprendo...</p>        
+				<ul class="answers">            
+				<input type="number" id="ec1" min="1" max="4"> me gusta vivir sensaciones.<br/>          
+				<input type="number" id="or1" min="1" max="4"> me gusta pensar sobre ideas.<br/>            
+				<input type="number" id="ca1" min="1" max="4"> me gusta estar haciendo cosas.<br/>            
+				<input type="number" id="ea1" min="1" max="4"> me gusta observar y escuchar.<br/>       
+				</ul>        
+				</div>
+				<div class="main col-md-5 col-md-offset-1">
+					<p class="question">2. Aprendo mejor cuando...</p>        
+
+					<ul class="answers">            
+					<input type="number" id="ec2" min="1" max="4"> escucho y observo cuidadosamente.<br/>           
+					<input type="number" id="or2" min="1" max="4"> confío en el pensamiento lógico.<br/>            
+					<input type="number" id="ca2" min="1" max="4"> confío en mi intuición y sentimientos.<br/>           
+					<input type="number" id="ea2" min="1" max="4"> trabajo duro para lograr hacer las cosas.<br/>       
+					</ul>        
+
+				</div>
+		</div>
+		</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">3. Cuando estoy aprendiendo...</p>        
+
+				<ul class="answers">            
+				<input type="number" id="ec3" min="1" max="4"> tiendo a usar el razonamiento.<br/>            
+				<input type="number" id="or3" min="1" max="4"> soy responsable con lo que hago.<br/>            
+				<input type="number" id="ca3" min="1" max="4"> soy callado y reservado.<br/>           
+				<input type="number" id="ea3" min="1" max="4"> tengo fuertes sensaciones y reacciones.<br/>       
+				</ul>     
+				</div>
+
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">4. Yo aprendo...</p>        
+
+				<ul class="answers">           
+				<input type="number" id="ec4" min="1" max="4"> sintiendo.<br/>            
+				<input type="number" id="or4" min="1" max="4"> haciendo.<br/>            
+				<input type="number" id="ca4" min="1" max="4"> observando.<br/>            
+				<input type="number" id="ea4" min="1" max="4"> pensando.<br/>        
+				</ul>    
+				</div>
+		</div>
+		</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">5. Cuando aprendo...</p>        
+
+				<ul class="answers">            
+				<input type="number" id="ec5" min="1" max="4"> estoy abierto a nuevas experiencias.<br/>            
+				<input type="number" id="or5" min="1" max="4"> observo todos los aspectos del asunto.<br/>            
+				<input type="number" id="ca5" min="1" max="4"> me gusta analizar las cosas, descomponerlas en sus partes.<br/>           
+				<input type="number" id="ea5" min="1" max="4"> me gusta probar e intentar hacer las cosas.<br/>        
+				</ul>
+
+				</div>
+
+
+				<div class="main col-md-5 col-md-offset-1">
+
+				<p class="question">6. Cuando estoy aprendiendo...</p>        
+				<ul class="answers">            
+				<input type="number" id="ec6" min="1" max="4"> soy una persona observadora.<br/>            
+				<input type="number" id="or6" min="1" max="4"> soy una persona activa.<br/>            
+				<input type="number" id="ca6" min="1" max="4"> soy una persona intuitiva.<br/>            
+				<input type="number" id="ea6" min="1" max="4"> soy una persona lógica.<br/>        
+				</ul>  
+				</div>
+		</div>
+		</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">7. Yo aprendo mejor de...</p>        
+
+				<ul class="answers">            
+				<input type="number" id="ec7" min="1" max="4"> la observación.<br/>            
+				<input type="number" id="or7" min="1" max="4"> la relación con las otras personas.<br/>            
+				<input type="number" id="ca7" min="1" max="4"> las teorías racionales.<br/>            
+				<input type="number" id="ea7" min="1" max="4"> la oportunidad de probar y practicar.<br/>        
+				</ul>     
+				</div>
+
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">8. Cuando aprendo...</p>        
+
+				<ul class="answers">            
+				<input type="number" id="ec8" min="1" max="4"> me gusta ver los resultados de mi trabajo.<br/>            
+				<input type="number" id="or8" min="1" max="4"> me gustan las ideas y las teorías.<br/>            
+				<input type="number" id="ca8" min="1" max="4"> me tomo mi tiempo antes de actuar.<br/>            
+				<input type="number" id="ea8" min="1" max="4"> me siento personalmente involucrado en las cosas.<br/>       
+				</ul> 
+				</div>
+		</div>
+		</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">9. Aprendo mejor cuando...</p>        
+
+				<ul class="answers">            
+				<input type="number" id="ec9" min="1" max="4"> confío en mis observaciones.<br/>            
+				<input type="number" id="or9" min="1" max="4"> confío en mis sentimientos.<br/>            
+				<input type="number" id="ca9" min="1" max="4"> puedo probar por mi cuenta.<br/>            
+				<input type="number" id="ea9" min="1" max="4"> confío en mis ideas.<br/>        
+				</ul>   
+				</div>
+
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">10. Cuando estoy aprendiendo...</p>        
+
+				<ul class="answers">           
+				<input type="number" id="ec10" min="1" max="4"> soy una persona reservada.<br/>            
+				<input type="number" id="or10" min="1" max="4"> soy una persona receptiva.<br/>            
+				<input type="number" id="ca10" min="1" max="4"> soy una persona responsable.<br/>            
+				<input type="number" id="ea10" min="1" max="4"> soy una persona racional.<br/>        
+				</ul> 
+
+				</div>
+		</div>
+		</div>
+		<div class="jumbotron text-left">
+		<div class="container row">
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">11. Cuando aprendo...</p>        
+
+				<ul class="answers">           
+				<input type="number" id="ec11" min="1" max="4"> me involucro.<br/>            
+				<input type="number" id="or11" min="1" max="4"> me gusta observar.<br/>            
+				<input type="number" id="ca11" min="1" max="4"> evalúo las cosas.<br/>            
+				<input type="number" id="ea11" min="1" max="4"> me gusta ser activo.<br/>        
+				</ul>    
+
+				</div>
+				<div class="main col-md-5 col-md-offset-1">
+				<p class="question">12. Aprendo mejor cuando...</p>        
+
+				<ul class="answers">           
+				<input type="number" id="ec12" min="1" max="4"> analizo ideas.<br/>            
+				<input type="number" id="or12" min="1" max="4"> soy receptivo y abierto.<br/>            
+				<input type="number" id="ca12" min="1" max="4"> soy cuidadoso.<br/>            
+				<input type="number" id="ea12" min="1" max="4"> soy práctico.<br/>        
+				</ul> 
+				</div>
+		</div>
+		</div>
+	<button onclick="grupo()" type="submit" class="btn btn-lg btn-primary">Registrarse</button>
+	</form>
+
+

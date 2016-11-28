@@ -1,0 +1,52 @@
+	<%- contentFor('hero') %>
+	<section class="hero">
+		<div class="hero-content">
+			<h2>Bienvenido a SEGAP USM</h2>
+			<p> </p>
+
+			<a href="/signup" class="btn btn-lg btn-primary">Registro Alumnos</a>
+			<a href="/contact" class="btn btn-lg btn-primary">Contáctanos</a>
+		</div>
+	</section>
+
+		<div class="container">
+	        <div class="col-sm-6 col-sm-offset-3">
+
+	            <h1><span class="fa fa-sign-in"></span> Usuarios Registrados</h1>
+
+	            <!-- LOGIN FORM -->
+	            <form action="/login" method="post">
+	                <div class="form-group">
+	                    <label>Correo Electrónico</label>
+	                    <input type="text" class="form-control" name="username">
+	                </div>
+	                <div class="form-group">
+	                    <label>Contraseña</label>
+	                    <input type="password" class="form-control" name="password">
+	                </div>
+	                <div class="form-group">
+	                    <label>Recordar</label>
+	                    <input type="checkbox" name="remember" value="yes">
+	                </div>
+
+	                <button type="submit" class="btn btn-lg btn-primary">Iniciar Sesión</button>
+	            </form>
+
+	            <hr>
+						<a  href="/forgot" class="help-block"> ¿Olvidó su contraseña? </a>
+
+
+			</div>
+			<hr>
+		</div>
+		
+
+		<div class="container">
+	        <div class="col-sm-6 col-sm-offset-3">
+	        <h3 class="info"> Registro de Profesores </h3>
+	        <p class="info"> Para registrarse como Profesor, por favor contáctese con el administrador, mediante el siguiente link. </p>
+	        <a href="/contact" class="help-block">Mensaje de Registro</a> 
+	        </div>
+
+	     </div>
+	     <hr>

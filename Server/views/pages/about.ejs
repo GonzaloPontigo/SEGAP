@@ -1,0 +1,27 @@
+	<%- contentFor('hero') %>
+	<section class="hero">
+		<div class="hero-content">
+			<h2>Acerca del Equipo de Trabajo</h2>
+			<p>Equipo de trabajo compuesto por 3 integrantes.</p>
+
+			<a href="/" class="btn btn-lg btn-primary">Volver al Home</a>
+			<a href="/contact" class="btn btn-lg btn-primary">Escríbenos</a>
+		</div>
+	</section>
+
+	<%- contentFor('body') %>
+	<div class="jumbotron text-center">
+		<h1> Equipo </h1>
+		<div class="row">
+		<% for (user of users) { %>
+			<div class="col-sm-3 text-xs-center">
+				<h2><%= user.name %></h2>
+				<small><h5><%= user.email %></h5></small>
+				<img src="<%= user.avatar %>" class="img-thumbnail rounded mx-auto d-block img-responsive" alt="" >
+			</div>
+			<% } %>
+		</div>
+	</div>
+		
+
+	

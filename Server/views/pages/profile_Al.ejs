@@ -1,0 +1,57 @@
+<div class="container-fluid">
+			<br>
+			<div class="col-md-11">
+				<ol class="breadcrumb">
+					<li class="active"><a href="#">Perfil</a></li>
+					<li> <small><span class="glyphicon glyphicon-chevron-right"></span></small></li>
+					<li><a href="#">Mis cursos</a></li>
+				</ol>
+			</div>
+			
+	</div>
+
+
+	<div class="container">
+			<section class="main row">
+
+				<div class="main visible-lg visible-md col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+						    	<h3 class="panel-title">Usuario Identificado <a href="#"><small><span class="glyphicon glyphicon-minus"></span></small></a></h3> 
+						  </div>
+						  <div class="panel-body">
+						    	<br>
+								<strong>Nombre </strong>: <%= user.nom + ' ' + user.apell%><br>
+								<strong>Mail </strong>:<small> <%= user.mail %></small><br>
+								<img src="<%='../img/'+user.grupo+'.png' %>" class="img-thumbnail img-fluid" alt="Responsive image">
+						    	<br>
+						  </div>
+
+					</div>
+					
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+						    	<h3 class="panel-title">Vista General Cursos <a href="#"><small><span class="text-right glyphicon glyphicon-minus"></span></small></a></h3> 
+						  </div>
+						  <div class="panel-body" >
+						    	<a href="/fisica2"><small><span class="glyphicon glyphicon-chevron-right"></span></small> Física 120</a></h3>
+						    	<br> <hr>
+						  </div>
+					</div>
+				</div>
+
+				<div class="main visible-lg visible-md col-xs-12 col-sm-4 col-md-3 col-lg-3">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+						    	<h3 class="panel-title">Administración <a href="#"><small><span class="text-right glyphicon glyphicon-minus"></span></small></a></h3> 
+						  </div>
+						  <div class="panel-body">
+
+						  </div>
+					</div>
+				</div>
+			</section>
+	</div>
+
